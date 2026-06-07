@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="doc">
+  <header class="doc-header">
+    <h1 class="doc-title">{{ .Title }}</h1>
+
+    {{/* Version sticker — per doc_kind from frontmatter, fallback "—" */}}
+    {{ $kind := .Params.doc_kind }}
+    {{ $version := "—" }}
+    {{ if eq $kind "privacy" }}{{ $version = .Site.Params.pp_version }}{{ end }}
+    {{ if eq $kind "terms" }}{{ $version = .Site.Params.tos_version }}{{ end }}
+    {{ if eq $kind "disclaimer" }}{{ $version = .Site.Params.hd_version }}{{ end }}
+
+    <p class="doc-meta">
+      <span class="doc-version">{{ i18n "doc_version" }} <strong>{{ $version }}</strong></span>
+      <span class="doc-sep">·</span>
+      <span class="doc-updated">{{ i18n "last_updated" }} {{ .Site.Params.last_updated }}</span>
+    </p>
+  </header>
+
+  <div class="doc-body">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

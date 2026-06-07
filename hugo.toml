@@ -1,0 +1,56 @@
+baseURL = "https://snapcal-law.web.app/"
+defaultContentLanguage = "th"
+title = "SnapCal — Legal"
+enableRobotsTXT = true
+enableGitInfo = true
+
+# Disable unused features (no blog / no taxonomies on legal site)
+disableKinds = ["taxonomy", "term", "RSS"]
+
+# Cleaner URLs: /privacy instead of /privacy/index.html
+[permalinks]
+  page = "/:contentbasename"
+
+[outputs]
+  home = ["HTML"]
+  page = ["HTML"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false   # block raw HTML in MD — defense against accidental injection by future editors
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 3
+    ordered    = false
+
+[languages]
+  [languages.th]
+    label      = "ไทย"
+    locale     = "th-TH"
+    weight     = 1
+    contentDir = "content/th"
+    [languages.th.params]
+      lang_label = "ไทย"
+  [languages.en]
+    label      = "English"
+    locale     = "en-US"
+    weight     = 2
+    contentDir = "content/en"
+    [languages.en.params]
+      lang_label = "English"
+
+[params]
+  # Contact / publisher
+  contact_email = "privacy@snapcal.app"
+  publisher     = "SnapCal"
+
+  # Document versions — ตรงกับไฟล์ใน content/. Bump พร้อม ConsentVersion ใน go-backend.
+  last_updated  = "2026-06-07"
+  pp_version    = "1.0"
+  tos_version   = "1.0"
+  hd_version    = "1.0"
+
+  # Consent version anchor — ตรงกับ store.ConsentVersion ใน go-backend
+  # (สำหรับ audit cross-reference; ไม่จำเป็นต้องโชว์ user ทุก page)
+  consent_version = "2026-06-07-v2"

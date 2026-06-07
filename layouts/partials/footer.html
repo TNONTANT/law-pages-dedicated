@@ -1,0 +1,19 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer-inner">
+    <div class="footer-col footer-col-contact">
+      <p class="footer-label">{{ i18n "contact" }}</p>
+      <p><a href="mailto:{{ .Site.Params.contact_email }}">{{ .Site.Params.contact_email }}</a></p>
+    </div>
+
+    <div class="footer-col footer-col-links">
+      <a href="{{ "/privacy" | relLangURL }}">{{ i18n "privacy_link" }}</a>
+      <a href="{{ "/terms" | relLangURL }}">{{ i18n "terms_link" }}</a>
+      <a href="{{ "/disclaimer" | relLangURL }}">{{ i18n "disclaimer_link" }}</a>
+    </div>
+
+    <div class="footer-col footer-col-meta">
+      <p>© {{ now.Year }} {{ .Site.Params.publisher }} — {{ i18n "copyright" }}</p>
+      <p class="footer-anchor">consent_version: <code>{{ .Site.Params.consent_version }}</code></p>
+    </div>
+  </div>
+</footer>

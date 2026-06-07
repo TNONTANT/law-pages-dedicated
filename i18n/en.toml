@@ -1,0 +1,29 @@
+[doc_version]
+other = "Version"
+
+[last_updated]
+other = "Last updated"
+
+[contact]
+other = "Contact"
+
+[switch_lang]
+other = "ไทย"
+
+[privacy_link]
+other = "Privacy Policy"
+
+[terms_link]
+other = "Terms of Service"
+
+[disclaimer_link]
+other = "Health Disclaimer"
+
+[copyright]
+other = "All rights reserved"
+
+[skip_to_content]
+other = "Skip to content"
+
+[back_to_top]
+other = "Back to top"

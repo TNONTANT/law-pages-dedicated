@@ -1,0 +1,18 @@
+# Hugo build output
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+
+# Node (firebase-tools may drop these)
+node_modules/
+
+# Editor
+.DS_Store
+.vscode/
+.idea/
+*.swp

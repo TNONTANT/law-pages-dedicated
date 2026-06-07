@@ -1,0 +1,29 @@
+[doc_version]
+other = "เวอร์ชัน"
+
+[last_updated]
+other = "อัพเดตล่าสุด"
+
+[contact]
+other = "ติดต่อ"
+
+[switch_lang]
+other = "English"
+
+[privacy_link]
+other = "นโยบายความเป็นส่วนตัว"
+
+[terms_link]
+other = "ข้อกำหนดการใช้บริการ"
+
+[disclaimer_link]
+other = "คำเตือนสุขภาพ"
+
+[copyright]
+other = "สงวนลิขสิทธิ์"
+
+[skip_to_content]
+other = "ข้ามไปยังเนื้อหา"
+
+[back_to_top]
+other = "กลับขึ้นบน"

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale | default .Site.Language.Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+
+  <title>{{ block "title" . }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+
+  {{ with .Description | default .Site.Params.publisher }}
+  <meta name="description" content="{{ . }}">
+  {{ end }}
+
+  {{/* Open Graph (minimal — legal pages don't need rich social cards) */}}
+  <meta property="og:title" content="{{ .Title }} — {{ .Site.Title }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ with .Description }}<meta property="og:description" content="{{ . }}">{{ end }}
+
+  {{/* Fonts + tokens — keep in sync with go-backend templates/_design_tokens.html */}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@500;600&family=Noto+Sans+Thai:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
+
+  {{/* alternate links for hreflang */}}
+  {{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+  {{ end }}
+  <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">{{ i18n "skip_to_content" }}</a>
+
+  {{ partial "header.html" . }}
+
+  <main id="main" class="page">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+</body>
+</html>

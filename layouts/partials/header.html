@@ -1,0 +1,28 @@
+<header class="site-header" role="banner">
+  <div class="site-header-inner">
+    <a class="site-title" href="{{ "/" | relLangURL }}">
+      <span class="site-mark">SnapCal</span>
+      <span class="site-tagline">Legal</span>
+    </a>
+
+    <nav class="site-nav" aria-label="primary">
+      <a class="nav-link {{ if eq .Params.doc_kind "privacy" }}is-active{{ end }}" href="{{ "/privacy" | relLangURL }}">{{ i18n "privacy_link" }}</a>
+      <a class="nav-link {{ if eq .Params.doc_kind "terms" }}is-active{{ end }}" href="{{ "/terms" | relLangURL }}">{{ i18n "terms_link" }}</a>
+      <a class="nav-link {{ if eq .Params.doc_kind "disclaimer" }}is-active{{ end }}" href="{{ "/disclaimer" | relLangURL }}">{{ i18n "disclaimer_link" }}</a>
+
+      {{/* Lang switcher — link to translation of current page if exists, otherwise root of other lang */}}
+      {{ $switched := false }}
+      {{ range .Translations }}
+        <a class="nav-link lang-switch" href="{{ .Permalink }}" hreflang="{{ .Lang }}">{{ i18n "switch_lang" }}</a>
+        {{ $switched = true }}
+      {{ end }}
+      {{ if not $switched }}
+        {{ range .Site.Languages }}
+          {{ if ne .Lang $.Site.Language.Lang }}
+            <a class="nav-link lang-switch" href="{{ printf "/%s/" .Lang | relURL }}" hreflang="{{ .Lang }}">{{ i18n "switch_lang" }}</a>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </nav>
+  </div>
+</header>
