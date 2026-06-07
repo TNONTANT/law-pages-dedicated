@@ -24,8 +24,8 @@ preview: build
 	firebase hosting:channel:deploy preview --expires 7d
 
 check:
-	@HOST=$$(firebase hosting:sites:list 2>/dev/null | awk '/snapcal-law/ {print $$2; exit}'); \
-	  HOST=$${HOST:-snapcal-law.web.app}; \
+	@HOST=$$(firebase hosting:sites:list 2>/dev/null | awk '/nuri-492815/ {print $$2; exit}'); \
+	  HOST=$${HOST:-nuri-492815.web.app}; \
 	  echo "Checking https://$$HOST ..."; \
 	  for path in /privacy /terms /disclaimer /en/privacy /en/terms /en/disclaimer; do \
 	    code=$$(curl -s -o /dev/null -w "%{http_code}" "https://$$HOST$$path"); \

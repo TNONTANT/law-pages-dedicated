@@ -3,7 +3,7 @@
 > Public legal pages for **SnapCal**: Privacy Policy, Terms of Service, Health Disclaimer
 > Canonical source of truth — referenced by go-backend consent LIFF (NUR-242) and by `cal-coach-knowledge/BusinessOS/law-pdpa/`
 
-**Live:** https://snapcal-law.web.app
+**Live:** https://nuri-492815.web.app (custom domain TBD — will swap once `snapcal.app` is registered)
 
 ---
 

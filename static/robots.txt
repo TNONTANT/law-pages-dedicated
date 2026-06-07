@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://snapcal-law.web.app/sitemap.xml
+Sitemap: https://nuri-492815.web.app/sitemap.xml
