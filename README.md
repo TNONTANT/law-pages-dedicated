@@ -24,7 +24,7 @@ hugo server -D
 # → http://localhost:1313
 
 # production build
-hugo --minify
+hugo --minify --gc
 # output → ./public/
 
 # manual deploy (CI does this automatically on push)
