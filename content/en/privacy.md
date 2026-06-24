@@ -26,6 +26,7 @@ Email: privacy@snapcal.app
 | Meal history, nutrition analysis results | Daily/weekly summaries, progress tracking | s.26 — Explicit consent | **Sensitive (health)** |
 | Medical screening flag | User safety | s.26 — Explicit consent | **Sensitive (health)** |
 | Consent records (timestamp, content, action) | Legal evidence of consent | s.24(5) — Legal obligation | General personal data |
+| AI usage counters (request count per period — no food content) | Rate limit enforcement, prevent free-tier abuse | s.24(6) — Legitimate interests | General personal data |
 
 ---
 
@@ -34,9 +35,10 @@ Email: privacy@snapcal.app
 | Data | Retention Period | Deletion Method |
 |------|-----------------|-----------------|
 | Food photos | 14 days from upload | Automatic — Google Cloud Storage lifecycle policy |
-| Health profile + meal history | 12 months from last activity | Automatic system deletion |
+| Health profile + meal history | **Immediately on consent withdrawal**; 12 months from last activity for inactive accounts | Immediate: cascade delete on withdrawal; Automatic: system deletion after inactivity |
 | LINE User ID + display name | Duration of account | Deleted on consent withdrawal or account deletion |
 | Consent records | **10 years** from consent date | Retained per legal obligation even after account deletion |
+| AI usage counters | **60 days** from account deletion | Automatic background deletion (retained under s.24(6) legitimate interests to prevent quota abuse) |
 
 ---
 
@@ -46,12 +48,12 @@ We do not sell, trade, or rent your personal data. We share data only with the f
 
 | Processor | Data Shared | Purpose | Location | Safeguard |
 |-----------|-------------|---------|----------|-----------|
-| **Google LLC** (Google Cloud AI — Vertex AI) | Food photos, AI prompts | Nutrition analysis | Singapore (asia-southeast1) | Google Cloud DPA |
-| **Google LLC** (Cloud Run) | System logs (no user PII) | Backend compute | Singapore (asia-southeast1) | Google Cloud DPA |
+| **Google LLC** (Google Cloud) | Food photos, AI prompts | AI nutrition analysis (processed by Google Cloud, Singapore) | Singapore | Google Cloud DPA |
+| **Google LLC** (Google Cloud) | System logs (no user PII) | Backend compute | Singapore | Google Cloud DPA |
 | **Supabase Inc.** | All user data | Primary database | Singapore (AWS ap-southeast-1) | Supabase DPA |
 | **LINE Corporation** | Messages via LINE Messaging API | Notification delivery | Japan/Singapore | LINE ToS + Messaging API Terms |
 
-> Google LLC commits that data sent via Google Cloud AI will not be used to train AI models without separate explicit consent.
+> Google LLC commits that data processed via Google Cloud will not be used to train AI models without separate explicit consent.
 
 ---
 
@@ -59,7 +61,7 @@ We do not sell, trade, or rent your personal data. We share data only with the f
 
 Your data may be transferred internationally as described above. Safeguards:
 
-- **Singapore (Google Cloud AI / Vertex AI, Google Cloud Run, Supabase):** Singapore PDPA 2012, recognised as providing adequate protection. Google LLC additionally covered by Google Cloud Data Processing Addendum (DPA)
+- **Singapore (Google Cloud, Supabase):** Singapore PDPA 2012, recognised as providing adequate protection. Google LLC additionally covered by Google Cloud Data Processing Addendum (DPA)
 - **Japan/Singapore (LINE):** Japan APPI + Singapore PDPA, recognised as providing adequate protection
 
 ---
@@ -81,7 +83,7 @@ Withdrawal does not affect the lawfulness of processing prior to withdrawal.
 
 ## 7. Consequences of Not Providing Data
 
-- **Declining cross-border consent:** SnapCal cannot be used, as food photo analysis requires transfer to Google Cloud AI.
+- **Declining cross-border consent:** SnapCal cannot be used, as food photo analysis requires processing by Google Cloud (Singapore).
 - **Declining health data consent:** Personal TDEE and nutrition summaries will not be available. You may still receive general estimates from food photo analysis.
 
 ---

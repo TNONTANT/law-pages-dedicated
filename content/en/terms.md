@@ -90,7 +90,7 @@ SnapCal is provided "as-is." We do not warrant:
 
 ## 9. Termination
 
-**By you:** Withdraw consent via LINE menu → Settings → Withdraw Consent. Data is deleted immediately.
+**By you:** Withdraw consent via LINE menu → Settings → Withdraw Consent. Data is deleted immediately, except: (a) consent records retained 10 years per legal obligation; (b) AI usage counters retained up to 60 days to prevent free-tier abuse (no food content — request counts only).
 
 **By us:** We reserve the right to suspend or terminate accounts that:
 - Violate these Terms
