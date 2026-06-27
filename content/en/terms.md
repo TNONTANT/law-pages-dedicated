@@ -11,8 +11,9 @@ sitemap:
 
 By using SnapCal via LINE Official Account ("Service"), you agree to these Terms. If you do not agree, please stop using the Service and withdraw your consent.
 
-Provider: **SnapCal** (Commercial Registration No. [MOCK-REG-NUMBER])
+Provider: **SnapCal** (beta — operated by an individual; commercial registration pending)
 Contact: privacy@snapcal.app
+Sub-processor list: [/en/subprocessors/](/en/subprocessors/)
 
 ---
 

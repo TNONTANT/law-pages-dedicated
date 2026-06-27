@@ -11,8 +11,9 @@ sitemap:
 
 การใช้บริการ SnapCal ผ่าน LINE Official Account ("บริการ") ถือว่าคุณยอมรับข้อกำหนดเหล่านี้ทั้งหมด หากไม่ยอมรับ กรุณาหยุดใช้บริการและถอนความยินยอม
 
-ผู้ให้บริการ: **SnapCal** (ทะเบียนพาณิชย์ เลขที่ [MOCK-REG-NUMBER])
+ผู้ให้บริการ: **SnapCal** (ระยะ beta — ดำเนินการในนามบุคคลธรรมดา อยู่ระหว่างจดทะเบียนพาณิชย์)
 ติดต่อ: privacy@snapcal.app
+รายชื่อ Sub-processor: [/th/subprocessors/](/th/subprocessors/)
 
 ---
 
