@@ -7,7 +7,7 @@ sitemap:
   changefreq: monthly
 ---
 
-**Version:** 2026-06-27-v3 · **Last updated:** 2026-06-27 · Sub-processor list: [/en/subprocessors/](/en/subprocessors/)
+**Version:** 2026-06-07-v2 · **Last updated:** 2026-06-28 · Sub-processor list: [/en/subprocessors/](/en/subprocessors/)
 
 ## 1. Data Controller
 
@@ -47,7 +47,9 @@ We will update this section with the registered entity name and address once com
 
 ## 4. Disclosure to Third Parties
 
-We do not sell, trade, or rent your personal data. We share data only with the Sub-processors listed at [/en/subprocessors/](/en/subprocessors/). Summary:
+**Marketing Commitment:** We do **not sell, trade, or rent** your personal data; we do **not use** your data for third-party advertising, retargeting, or advertising profiling; we do **not permit** any Sub-processor to train its own AI models with your data. Adding a Sub-processor for any of these purposes constitutes a scope-of-consent change and requires fresh consent (see §9).
+
+We share data only with the Sub-processors listed at [/en/subprocessors/](/en/subprocessors/). Summary:
 
 | Processor | Data Shared | Purpose | Location | Safeguard |
 |-----------|-------------|---------|----------|-----------|
@@ -113,7 +115,9 @@ We may update this policy from time to time. For significant changes affecting y
 
 **Material changes** (new country of processing, new category of sensitive data, change in legal basis) additionally require **re-consent** — you will be asked to review and accept the updated terms before continuing to use the service. Existing consent records remain valid evidence for processing that occurred before the change.
 
-**v2 → v3 (2026-06-27):** Database provider changed from Supabase Inc. to Neon Inc. (same physical region, Singapore). AI processing changed from Vertex AI (Singapore regional) to the Gemini Developer API (global routing). Backend compute and photo staging moved to Google Cloud Bangkok (asia-southeast3). Existing users have until 2026-07-27 to re-consent before the hard-block re-consent gate activates.
+**Documentation update (2026-06-28) — no scope change:** Added an explicit Marketing Commitment statement to §4 (no third-party advertising, no profiling, no third-party AI training); tightened the LIFF consent surface to use processor *categories* and link to the [Sub-processor list](/en/subprocessors/) rather than naming individual vendors inline. Sub-processors, purposes, and retention periods are unchanged — **no re-consent required** (consent version remains 2026-06-07-v2).
+
+**v2 (2026-06-07):** Database provider changed from Supabase Inc. to Neon Inc. (same physical region, Singapore). AI processing changed from Vertex AI (Singapore regional) to the Gemini Developer API (global routing). Backend compute and photo staging moved to Google Cloud Bangkok (asia-southeast3). Existing users had to re-consent before the hard-block re-consent gate activated.
 
 ---
 
