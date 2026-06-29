@@ -13,7 +13,7 @@ sitemap:
 
 ผู้ให้บริการ: **SnapCal** (ระยะ beta — ดำเนินการในนามบุคคลธรรมดา อยู่ระหว่างจดทะเบียนพาณิชย์)
 ติดต่อ: privacy@snapcal.app
-รายชื่อ Sub-processor: [/th/subprocessors/](/th/subprocessors/)
+รายชื่อ Sub-processor: [/subprocessors/](/subprocessors/)
 
 ---
 
