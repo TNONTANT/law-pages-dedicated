@@ -46,7 +46,9 @@ disableKinds = ["taxonomy", "term", "RSS"]
   publisher     = "SnapCal"
 
   # Document versions — ตรงกับไฟล์ใน content/. Bump พร้อม ConsentVersion ใน go-backend.
-  last_updated  = "2026-06-07"
+  # last_updated bumps on any content edit (date marker); pp/tos/hd_version bumps only
+  # when scope changes (per BusinessOS/law-pdpa/consent-snapshots policy).
+  last_updated  = "2026-06-28"
   pp_version    = "1.0"
   tos_version   = "1.0"
   hd_version    = "1.0"
